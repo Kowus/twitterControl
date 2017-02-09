@@ -111,7 +111,10 @@ void myTweet(char * userName , char * userTweet)
 
 This simple example allows you to Track a specific (**in this case _:1_**) keyword in your posts, and if it contains a specific keyword, the led turns on.
 
-## What if we wanted to check for multiple keywords?
+
+
+What if we wanted to check for multiple keywords?
+============
 
 >    The above example will not work because `strstr()` will only check if 
 >    **:1** exists in the string, and depending on how you structure your if 
@@ -122,6 +125,8 @@ This simple example allows you to Track a specific (**in this case _:1_**) keywo
 >>      Using strstr() will only check for :1 once.
 
 # Solution
+> I will brush through the code quickly the code is heavily commented 
+> to explain what is happening at what point. 
 
 ```arduino
 /*
@@ -157,8 +162,10 @@ int pinA2 = 5;
 int enableB = 10;
 int pinB1 = 4;
 int pinB2 = 3;
+```
 
-
+set the motor pins to OUTPUT, begin OneSheeld instance and write to phone terminal: waitiing for tweet...
+```arduino
 void setup() {
   //  Set Motor Pin Behaviours
   pinMode(enableA, OUTPUT);
@@ -177,18 +184,25 @@ void setup() {
   Twitter.setOnNewTweet(&myTweet);
 
 }
+```
 
+Leave the void loop blank
+```arduino
 void loop()
 {
   /* Leave the loop empty. */
 }
-
+```
+create shieldSelection function to track keyword
+```arduino
 void shieldSelection()
 {
-  /* Track keyword 1Sheeld on Twitter. */
+  /* Track hashtag #kofecode on Twitter. */
   Twitter.trackKeyword("#kofecode");
 }
+```
 
+```arduino
 void myTweet(char * userName , char * userTweet)
 {
   for (j = 0, str1 = userTweet; ; j++, str1 = NULL) {
@@ -202,7 +216,7 @@ void myTweet(char * userName , char * userTweet)
       subToken = strtok_r(token, "-", &saveptr2);
       if (subToken == NULL)break;
       buf[j][i] = subToken;
-      Terminal.println("Token " + String(j) + " = " + String(buf[j][0]) + String("\t\t\tSubtoken = ") + String(buf[j][1]));
+      Terminal.println("Token "+String(j) + " = " + String(buf[j][0]) + \tSubtoken = " + String(buf[j][1]));
       subtokens[j] = String(buf[j][1]).toInt();
       OneSheeld.delay(100);
     }
@@ -435,3 +449,6 @@ void motorBBrake()
 }
 
 ```
+
+
+

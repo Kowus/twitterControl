@@ -76,7 +76,7 @@ void myTweet(char * userName , char * userTweet)
       subToken = strtok_r(token, "-", &saveptr2);
       if (subToken == NULL)break;
       buf[j][i] = subToken;
-      Terminal.println("Token " + String(j) + " = " + String(buf[j][0]) + String("\t\t\tSubtoken = ") + String(buf[j][1]));
+      Terminal.println("Token " + String(j) + " = " + String(buf[j][0]) + "\tSubtoken = ") + String(buf[j][1]));
       subtokens[j] = String(buf[j][1]).toInt();
       OneSheeld.delay(100);
     }
