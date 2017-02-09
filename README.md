@@ -31,7 +31,7 @@ Hardware
 
 ### [Download the OneSheeld library and App](http://1sheeld.com/downloads/)
 
-Using The Simple Twitter Example
+Using The Stock Twitter Example
 ========
 
 ```cpp
@@ -120,3 +120,6 @@ This simple example allows you to Track a specific (**in this case _:1_**) keywo
 >>  ## Example: 
 >>              OneSheeld :1 :2 :3 :4 :5 :1 :1 :3 :4
 >>      Using strstr() will only check for :1 once.
+
+# Solution
+
