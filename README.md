@@ -1,5 +1,15 @@
 # Twitter Control by Barnabas Nomo
->This Example on how to control a robot from Twitter
+>This Example on how to control a robot from Twitter by typing #kofecode and issuing a couple of commands.
+
+### Application Cases
+1. type #kofecode to enable trigger watch on current tweet
+2. :1 :2 :3 :4 :5 to specify dotion in different directions (forward, right, backward, left, and stop respectively)
+3. Takes an option and converts it to an integer to determine how long to execute a specific command. 
+
+>            Eg. #kofecode :1-2000 :2-450 :4-450 :3-2000 :1-6000 
+>            will cause the robot to move forward for 2 seconds, turn right for 450ms turn left for 450ms move backwards for 2 seconds and move forward for 6 seconds;
+>>          In case an option is not stated, it :1 and :2 will have a delay of 2000, :2 and :4 will have a delay of 450
+            
 
 Hardware
 ============
@@ -95,7 +105,7 @@ void myTweet(char * userName , char * userTweet)
 }
 ```
 
-This simple example allows you to Track a specific (**in this case _:1_**) keyword in your posts, and if it contains a specifc keyword, the led turns on.
+This simple example allows you to Track a specific (**in this case _:1_**) keyword in your posts, and if it contains a specific keyword, the led turns on.
 
 ## What if we wanted to check for multiple keywords?
 
@@ -103,3 +113,6 @@ This simple example allows you to Track a specific (**in this case _:1_**) keywo
 >    **:1** exists in the string, and depending on how you structure your if 
 >    statements, the code will do every instance once even if you had each 
 >    keyword multiple entered multiple times.
+>>  ## Example: 
+>>              OneSheeld :1 :2 :3 :4 :5 :1 :1 :3 :4
+>>      Using strstr() will only check for :1 once.
