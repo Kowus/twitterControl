@@ -1,5 +1,5 @@
 # Twitter Control by Barnabas Nomo
->This Example on how to control a robot from Twitter by typing #kofecode and issuing a couple of commands.
+## Example on how to control a robot from Twitter by typing #kofecode and issuing a couple of commands.
 
 ### Application Cases
 1. type #kofecode to enable trigger watch on current tweet
