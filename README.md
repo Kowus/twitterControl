@@ -7,8 +7,12 @@
 3. Takes an option and converts it to an integer to determine how long to execute a specific command. 
 
 >            Eg. #kofecode :1-2000 :2-450 :4-450 :3-2000 :1-6000 
->            will cause the robot to move forward for 2 seconds, turn right for 450ms turn left for 450ms move backwards for 2 seconds and move forward for 6 seconds;
->>          In case an option is not stated, it :1 and :2 will have a delay of 2000, :2 and :4 will have a delay of 450
+>            will cause the robot to move forward for 2 seconds, 
+>            turn right for 450ms, turn left for 450ms, 
+>            move backwards for 2 seconds and move forward for 6 seconds;
+>>          In case an option is not stated with any of the : 
+>>          commands,  :1 or :2 will have a delay of 2000, 
+>>          :2 and :4 will have a delay of 450
             
 
 Hardware
