@@ -78,7 +78,7 @@ void myTweet(char * userName , char * userTweet)
       buf[j][i] = subToken;
       Terminal.println("Token " + String(j) + " = " + String(buf[j][0]) + String("\t\t\tSubtoken = ") + String(buf[j][1]));
       subtokens[j] = String(buf[j][1]).toInt();
-      delay(100);
+      OneSheeld.delay(100);
     }
   }
   int tempToken = 0;
@@ -212,7 +212,7 @@ void forward(int time)
   brake(50);
   motorAForward();
   motorBForward();
-  delay(time);
+  OneSheeld.delay(time);
 }
 
 void backward(int time)
@@ -220,7 +220,7 @@ void backward(int time)
   brake(50);
   motorABackward();
   motorBBackward();
-  delay(time);
+  OneSheeld.delay(time);
 }
 
 void turnLeft(int time)
@@ -228,7 +228,7 @@ void turnLeft(int time)
   brake(50);
   motorABackward();
   motorBForward();
-  delay(time);
+  OneSheeld.delay(time);
 }
 
 void turnRight(int time)
@@ -236,7 +236,7 @@ void turnRight(int time)
   brake(50);
   motorAForward();
   motorBBackward();
-  delay(time);
+  OneSheeld.delay(time);
 }
 
 
@@ -244,7 +244,7 @@ void brake(int time)
 {
   motorABrake();
   motorBBrake();
-  delay(time);
+  OneSheeld.delay(time);
 }
 //Define low-level H-bridge commands
 
