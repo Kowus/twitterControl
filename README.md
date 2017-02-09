@@ -10,8 +10,6 @@ Hardware
 4. Assembled Robot kit 
 
 > # **Note:**
->           This Tutorial will not cover assembling the robot kit.
->           It will only cover how to use ONE SHEELD's 
->           twitter interface to queue commands to control your robot
+>           This Tutorial will not cover assembling the robot kit. It will only cover how to use ONE SHEELD's twitter interface to queue commands to control your robot
 
 
