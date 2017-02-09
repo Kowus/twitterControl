@@ -59,7 +59,7 @@ void loop()
 
 void shieldSelection()
 {
-  /* Track keyword 1Sheeld on Twitter. */
+  /* Track hashtag #kofecode on Twitter. */
   Twitter.trackKeyword("#kofecode");
 }
 
