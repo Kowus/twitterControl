@@ -209,6 +209,7 @@ void disableMotors()
 
 void forward(int time)
 {
+  brake(50);
   motorAForward();
   motorBForward();
   delay(time);
@@ -216,6 +217,7 @@ void forward(int time)
 
 void backward(int time)
 {
+  brake(50);
   motorABackward();
   motorBBackward();
   delay(time);
@@ -223,6 +225,7 @@ void backward(int time)
 
 void turnLeft(int time)
 {
+  brake(50);
   motorABackward();
   motorBForward();
   delay(time);
@@ -230,6 +233,7 @@ void turnLeft(int time)
 
 void turnRight(int time)
 {
+  brake(50);
   motorAForward();
   motorBBackward();
   delay(time);
