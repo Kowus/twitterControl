@@ -34,7 +34,7 @@ Hardware
 Using The Stock Twitter Example
 ========
 
-```cpp
+```c
 /*
 
 Twitter Shield Example
@@ -128,7 +128,7 @@ What if we wanted to check for multiple keywords?
 > I will brush through the code quickly the code is heavily commented 
 > to explain what is happening at what point. 
 
-```cpp
+```c
 /*
    Twitter Remote Control Robot
    by Barnabas Nomo <https://github.com/Kowus/twitterControl.git>
@@ -165,7 +165,7 @@ int pinB2 = 3;
 ```
 
 set the motor pins to OUTPUT, begin OneSheeld instance and write to phone terminal: waitiing for tweet...
-```cpp
+```c
 void setup() {
   //  Set Motor Pin Behaviours
   pinMode(enableA, OUTPUT);
@@ -187,14 +187,14 @@ void setup() {
 ```
 
 Leave the void loop blank
-```cpp
+```c
 void loop()
 {
   /* Leave the loop empty. */
 }
 ```
 create shieldSelection function to track keyword
-```cpp
+```c
 void shieldSelection()
 {
   /* Track hashtag #kofecode on Twitter. */
@@ -202,7 +202,7 @@ void shieldSelection()
 }
 ```
 
-```cpp
+```c
 void myTweet(char * userName , char * userTweet)
 {
   for (j = 0, str1 = userTweet; ; j++, str1 = NULL) {
