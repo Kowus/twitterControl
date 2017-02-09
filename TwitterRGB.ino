@@ -1,17 +1,9 @@
 /*
-
-  Twitter Shield Example
-
-  This example shows an application on 1Sheeld's Twitter shield.
-
-  By using this example, you can flash a LED once a certain keyword
-  is mentioned on Twitter.
-
-  OPTIONAL:
+ * Twitter Remote Control Robot
+ * by Barnabas Nomo <https://github.com/Kowus/twitterControl.git>
   To reduce the library compiled size and limit its memory usage, you
   can specify which shields you want to include in your sketch by
   defining CUSTOM_SETTINGS and the shields respective INCLUDE_ define.
-
 */
 
 #define CUSTOM_SETTINGS
@@ -32,7 +24,6 @@ char *buf[80][1];
 void setup() {
   /* Start communication. */
   OneSheeld.begin();
-  /* Set the LED pin as output. */
   Terminal.println("Waiting for tweet...");
   /* Subscribe to setOnSelected event for the Twitter shield. */
   Twitter.setOnSelected(&shieldSelection);
@@ -170,6 +161,6 @@ void myTweet(char * userName , char * userTweet)
     }
     it++;
   }
-  
+
   Terminal.println("Exited");
 }
