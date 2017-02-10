@@ -125,6 +125,12 @@ What if we wanted to check for multiple keywords?
 >>      Using strstr() will only check for :1 once.
 
 # Solution
+### Use string tokens
+ `strtok()` doesn't work on AVR platforms so we'll use `strtok_r()`
+
+ you can check the `man` page on linux. Both commands are similar. (attached, see strtok.txt)
+
+
 > I will brush through the code quickly the code is heavily commented 
 > to explain what is happening at what point. 
 
@@ -144,8 +150,7 @@ What if we wanted to check for multiple keywords?
 /* Include 1Sheeld library. */
 #include <OneSheeld.h>
 
-/* A variable to track number of tracked tweets returned. */
-//int trackingCounter = 0;
+
 char *str1, *token, *subToken, *saveptr1, *saveptr2;
 int j, it = 0, dsw = 0, i = 0, subtokens[30];
 int red = 13, blue = 12, green = 9;
