@@ -153,7 +153,7 @@ What if we wanted to check for multiple keywords?
 
 char *str1, *token, *subToken, *saveptr1, *saveptr2;
 int j, it = 0, dsw = 0, i = 0, subtokens[30];
-int red = 13, blue = 12, green = 9;
+
 
 char *buf[80][1];
 
@@ -235,11 +235,6 @@ void myTweet(char * userName , char * userTweet)
     switch (tempToken) {
       case 1:
         Terminal.println("case " + String(tempToken));
-        digitalWrite(blue, LOW);
-        digitalWrite(red, HIGH);
-        digitalWrite(green, LOW);
-
-
         if (subtokens[it] != NULL) {
           Terminal.println(String(subtokens[it]) + " is Not Null\n");
           forward(subtokens[it]);
@@ -251,9 +246,6 @@ void myTweet(char * userName , char * userTweet)
         break;
       case 2:
         Terminal.print("case " + String(buf[it][0]) + ":\t");
-        digitalWrite(red, LOW);
-        digitalWrite(blue, HIGH);
-        digitalWrite(green, LOW);
         if (subtokens[it] != NULL) {
           Terminal.println(String(subtokens[it]) + " is Not Null\n");
           turnRight(subtokens[it]);
@@ -277,9 +269,6 @@ void myTweet(char * userName , char * userTweet)
         break;
       case 4:
         Terminal.print("case " + String(buf[it][0]) + ":\t");
-        digitalWrite(red, HIGH);
-        digitalWrite(blue, HIGH);
-        digitalWrite(green, HIGH);
         if (subtokens[it] != NULL) {
           Terminal.println(String(subtokens[it]) + " is Not Null\n");
           turnLeft(subtokens[it]);
@@ -291,9 +280,6 @@ void myTweet(char * userName , char * userTweet)
       case 5:
 
         Terminal.print("case " + String(buf[it][0]) + ":\t");
-        digitalWrite(red, HIGH);
-        digitalWrite(blue, LOW);
-        digitalWrite(green, HIGH);
         if (subtokens[it] != NULL) {
           Terminal.println(String(subtokens[it]) + " is Not Null\n");
           brake(subtokens[it]);
@@ -313,9 +299,6 @@ void myTweet(char * userName , char * userTweet)
           continue;
         }
         else {
-          digitalWrite(red, LOW);
-          digitalWrite(blue, LOW);
-          digitalWrite(green, LOW);
           if (subtokens[it] != NULL) {
             Terminal.println(String(subtokens[it]) + " is Not Null\n");
             forward(subtokens[it]);
@@ -474,7 +457,6 @@ void motorBBrake()
 //int trackingCounter = 0;
 char *str1, *token, *subToken, *saveptr1, *saveptr2;
 int j, it = 0, dsw = 0, i = 0, subtokens[30];
-int red = 13, blue = 12, green = 9;
 
 char *buf[80][1];
 
@@ -547,11 +529,7 @@ void myTweet(char * userName , char * userTweet)
     switch (tempToken) {
       case 1:
         Terminal.println("case " + String(tempToken));
-        digitalWrite(blue, LOW);
-        digitalWrite(red, HIGH);
-        digitalWrite(green, LOW);
-
-
+        
         if (subtokens[it] != NULL) {
           Terminal.println(String(subtokens[it]) + " is Not Null\n");
           forward(subtokens[it]);
@@ -563,9 +541,6 @@ void myTweet(char * userName , char * userTweet)
         break;
       case 2:
         Terminal.print("case " + String(buf[it][0]) + ":\t");
-        digitalWrite(red, LOW);
-        digitalWrite(blue, HIGH);
-        digitalWrite(green, LOW);
         if (subtokens[it] != NULL) {
           Terminal.println(String(subtokens[it]) + " is Not Null\n");
           turnRight(subtokens[it]);
@@ -576,9 +551,6 @@ void myTweet(char * userName , char * userTweet)
         break;
       case 3:
         Terminal.print("case " + String(buf[it][0]) + ":\t");
-        digitalWrite(blue, LOW);
-        digitalWrite(green, HIGH);
-        digitalWrite(red, LOW);
         if (subtokens[it] != NULL) {
           Terminal.println(String(subtokens[it]) + " is Not Null\n");
           backward(subtokens[it]);
@@ -589,9 +561,6 @@ void myTweet(char * userName , char * userTweet)
         break;
       case 4:
         Terminal.print("case " + String(buf[it][0]) + ":\t");
-        digitalWrite(red, HIGH);
-        digitalWrite(blue, HIGH);
-        digitalWrite(green, HIGH);
         if (subtokens[it] != NULL) {
           Terminal.println(String(subtokens[it]) + " is Not Null\n");
           turnLeft(subtokens[it]);
@@ -603,9 +572,6 @@ void myTweet(char * userName , char * userTweet)
       case 5:
 
         Terminal.print("case " + String(buf[it][0]) + ":\t");
-        digitalWrite(red, HIGH);
-        digitalWrite(blue, LOW);
-        digitalWrite(green, HIGH);
         if (subtokens[it] != NULL) {
           Terminal.println(String(subtokens[it]) + " is Not Null\n");
           brake(subtokens[it]);
@@ -625,9 +591,6 @@ void myTweet(char * userName , char * userTweet)
           continue;
         }
         else {
-          digitalWrite(red, LOW);
-          digitalWrite(blue, LOW);
-          digitalWrite(green, LOW);
           if (subtokens[it] != NULL) {
             Terminal.println(String(subtokens[it]) + " is Not Null\n");
             forward(subtokens[it]);
